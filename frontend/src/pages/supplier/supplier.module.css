@@ -1,0 +1,24 @@
+.container_supplier{
+    
+}
+
+
+.container {
+    padding: 20px;
+}
+
+.supplierTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.supplierTable th,
+.supplierTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.supplierTable th {
+    background-color: #f2f2f2;
+}

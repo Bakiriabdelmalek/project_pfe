@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter/static/Inter-Regular.ttf")
+    format("truetype");
+  font-weight: 300;
+}
+
+.dashboard_container {
+  display: flex;
+  background-color: #f5f5f5;
+  width: 1920px;
+  height: 946px;
+  
+}
+
+.dashboard_all {
+  width: 100%;
+}
+

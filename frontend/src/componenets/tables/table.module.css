@@ -1,0 +1,76 @@
+/* table.module.css */
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins/Poppins-Black.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.second_half{
+    display: flex;
+    justify-content: end;
+    width: 80%;
+    gap: 20px;
+}
+
+.second_half button:last-child{
+    align-items: center;
+    background: #100DB1;
+    border-radius: 8px;
+    width: 104px;
+    height: 38px;
+    border: transparent;
+    color: #FFFFFF;
+    font-family: 'Poppins',sans-serif;
+    font-size: 13px;
+
+}
+
+.second_half button:first-child{
+    align-items: center;
+    background: #FFFFFF;
+    border: none;
+    border: 0.5px solid #D0D5DD;
+    border-radius: 8px;
+    width: 104px;
+    height: 38px;
+    
+    color: #344054;
+    font-family: 'Poppins',sans-serif;
+    font-size: 13px;
+
+}
+
+.second_half button span{
+    
+    margin-left: 10px;
+    
+    
+    margin-bottom: 40px;
+}
+
+.second_half button img{
+    
+   margin-top: px;
+}
