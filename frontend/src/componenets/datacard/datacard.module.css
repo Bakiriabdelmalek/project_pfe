@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 300;
+  
+}
+
+
+
+.main_datacard{
+
+display: flex;
+    flex-direction: column;
+border-radius: 25px;
+
+justify-content: center;
+
+}
+
+.main_datacard div{
+
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 20px;
+    justify-content: center;
+}
+.span_card_text{
+    font-family: 'Inter';
+    line-height: 14px;
+    font-weight: 400;
+    color: #1C1C1C;
+    font-size: 20px;
+    margin-bottom:10px;
+}
+
+.span_card_data{
+    margin-top: 8px;
+    font-family: 'Inter';
+    line-height: 24px;
+    font-weight: bold;
+    color: #1C1C1C;
+    font-size: 24px;
+    
+}

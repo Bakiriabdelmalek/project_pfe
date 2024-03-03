@@ -1,0 +1,27 @@
+.product_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.header_cards{
+    display: flex;
+    gap: 30px;
+}
+
+
+
+.full_table{
+    
+}
+
+.header_table{
+
+}
+
+.body_table{
+
+}
