@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql" // This can be "mysql", "sqlite", "sqlserver", or "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(uuid())
+  username  String    @unique
+  email     String    @unique
+  password  String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Supplier {
+  id                    String   @id @default(uuid())
+  name                  String
+  phone                 String
+  commerceRegistration  String   @map("CommerceRegister")
+  taxIdentification     String   @map("TaxIdentificationNumber")
+  statisticalNumber     String   @map("StatisticalNumber")
+  
+  products              Product[]
+}
+
+model Product {
+  id          String        @id @default(uuid())
+  name        String
+  categoryId  String
+  category    Category      @relation(fields: [categoryId], references: [id])
+  supplierId  String
+  supplier    Supplier      @relation(fields: [supplierId], references: [id])
+  purchaseItems PurchaseItem[]
+}
+
+model Category {
+  id          String   @id @default(uuid())
+  name        ProductCategory
+  products    Product[]
+}
+
+enum ProductCategory {
+  ELECTRONICS
+  CLOTHING
+  GROCERIES
+  FURNITURE
+  TOYS
+}
+
+model Client {
+  id              String          @id @default(uuid())
+  name            String
+  email           String          @unique
+  purchases       Purchase[]
+}
+
+model Purchase {
+  id              String          @id @default(uuid())
+  clientId        String
+  client          Client          @relation(fields: [clientId], references: [id])
+  purchaseItems   PurchaseItem[]
+  createdAt       DateTime        @default(now())
+}
+
+model PurchaseItem {
+  id              String      @id @default(uuid())
+  purchaseId      String
+  purchase        Purchase    @relation(fields: [purchaseId], references: [id])
+  productId       String
+  product         Product     @relation(fields: [productId], references: [id])
+  quantity        Int
+}
